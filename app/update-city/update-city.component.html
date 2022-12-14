@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+    <h2>Modifier un Produit :</h2>
+    </div>
+    <form >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >ID City</label>
+    <input readonly type="text" [(ngModel)]="currentCity.idCity"
+    name="idCity" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom City</label>
+    <input type="text"[(ngModel)]= "currentCity.nomCity"
+    name="nomCity" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >space</label>
+    <input type="number" [(ngModel)]= "currentCity.space"
+    name="space" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date création</label>
+<input type="date" [ngModel]="currentCity.DateCreation | date: 'yyyy-MM-dd'"
+(ngModelChange)=" currentCity.DateCreation= $event" name="dateCreation"
+ class="form-control">
+</div>
+<div class="mt-2">
+<button type="submit" (click)="updateCity()" class="btn btn-success">Modifer</button>
+</div>
+</form>
+</div>

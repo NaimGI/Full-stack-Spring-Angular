@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un City :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID City</label>
+        <input type="text" [(ngModel)]="newCity.idCity"
+        name="idCity" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom City</label>
+        <input type="text"[(ngModel)]= "newCity.nomCity"
+        name="nomCity" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Space</label>
+        <input type="number" [(ngModel)]= "newCity.space"
+        name="space" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date création</label>
+        <input type="date" [(ngModel)]= "newCity.DateCreation"
+        name="DateCreation" class="form-control">
+        </div>
+        <div class="mt-2">
+        <button type="submit" (click)="addCity()"class="btn btn-success">Ajouter</button>
+
+        <div>{{message}}</div>
+        </div>
+        </form>
+        </div>
